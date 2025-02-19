@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="scrolling-text-container">
+        <div class="scrolling-text">
+          <div class="scrolling-text-wrapper">
+            <span>M</span><span>A</span><span>D</span><span>E</span><span>&nbsp;</span>
+            <span>B</span><span>Y</span><span>&nbsp;</span>
+            <span>E</span><span>M</span><span>I</span>
+            
+            <!-- EXTRA REGEL: Tweede kopie voor vloeiende looping -->
+            <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+      
+            
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
+
+            <!-- CSS -->
+            @keyframes scrollText {
+                0% {
+                  transform: translateY(0);
+                }
+                100% {
+                  transform: translateY(-100%); /* Beweeg de tekst omhoog */
+                }
+              }
+              
+              .scrolling-text-container {
+                position: absolute;
+                right: 2rem;
+                top: 0;
+                height: 100vh;
+                width: 8rem;
+                overflow: hidden;
+              }
+              
+              .scrolling-text-wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%; /* Container vult het volledige scherm */
+                animation: scrollText 10s linear infinite; /* Oneindige scroll animatie */
+              }
+              
+              .scrolling-text {
+                font-family: 'Courier New', monospace;
+                font-size: 3rem;
+                font-weight: bold;
+                color: white;
+                line-height: 1;
+                letter-spacing: 0.2rem;
+                word-spacing: 1rem;
+                white-space: nowrap;
+                display: inline-block;
+              }
+              
+              .scrolling-text-wrapper .scrolling-text {
+                animation-delay: 0.5s; /* Delay voor een beetje variatie */
+              }

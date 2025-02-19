@@ -1,0 +1,100 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contact Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="contact.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8R7LFK0JNM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8R7LFK0JNM');
+</script>
+
+ </head>
+ <body class="bg-gray-100">
+  
+    <header class="header">
+        <div class="header-title">
+            <a href="index.html" class="logo">MADE BY EMI</a> - VIDEOGRAPHY
+        </div>
+        <nav class="nav">
+            <a href="werk.html">Werk</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+  <main class="flex flex-col items-center mt-10">
+    <form action="https://formspree.io/f/movjyaln" method="POST" class="w-full max-w-lg">
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="first-name">
+                Naam
+            </label>
+            <div class="flex space-x-4">
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                       id="first-name" 
+                       name="first-name" 
+                       placeholder="Voornaam" 
+                       type="text" 
+                       required/>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                       id="last-name" 
+                       name="last-name" 
+                       placeholder="Achternaam" 
+                       type="text" 
+                       required/>
+            </div>
+        </div>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                E-mail
+            </label>
+            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                   id="email" 
+                   name="email" 
+                   placeholder="Jouw e-mail" 
+                   type="email" 
+                   required/>
+        </div>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                Bericht
+            </label>
+            <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                      id="message" 
+                      name="message" 
+                      placeholder="Schrijf hier je bericht..." 
+                      rows="4" 
+                      required></textarea>
+        </div>
+        <div class="flex items-center justify-center">
+            <button class="bg-black text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" type="submit">
+                Sturen
+            </button>
+        </div>
+    </form>
+
+    <div class="mt-10 text-center">
+        <h2 class="text-xl font-bold">Mijn contactgegevens</h2>
+        <p class="mt-2">made-by-emi@hotmail.com</p>
+        <p class="mt-2">06 53 20 83 36</p>
+        <div class="mt-4">
+         <a class="text-2xl" href="#">
+          <i class="fab fa-linkedin"></i>
+         </a>
+        </div>
+
+  </main>
+ </body>
+</html>

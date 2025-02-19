@@ -1,0 +1,120 @@
+body {
+    background-color: white !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #1f2937;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+  
+.header {
+    background-color: rgb(243, 241, 241);
+    color: #1f2937;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.logo {
+    color: #1f2937;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    background-color: white;
+}
+
+  
+
+.img {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+
+/* Main Section Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+/* Form Section Styles */
+form {
+    width: 100%;
+    max-width: 32rem;
+}
+
+form .mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+form input:focus {
+    outline: none;
+}
+
+/* Contact Info Section Styles */
+.text-center h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.text-center p {
+    margin-top: 0.5rem;
+}
+
+.text-center a {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.text-center a:hover {
+    color: #1a202c;
+}
+
+/* Footer Styles */
+footer {
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .img {
+        width: 25%;
+    }
+}

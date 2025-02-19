@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Videography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="about.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R7LFK0JNM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-8R7LFK0JNM');
+    </script>
+
+  </head>
+
+  <body class="bg-gray-100">
+    <header class="header">
+        <div class="header-title">
+            <a href="index.html" class="logo">MADE BY EMI</a> - VIDEOGRAPHY
+        </div>
+        <nav class="nav">
+            <a href="werk.html">Werk</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="flex flex-col md:flex-row p-8 md:p-16">
+      <div class="md:w-1/2">
+        <h1 class="text-4xl font-bold mb-4">Over mij</h1>
+        <p class="mb-4">
+          You might talk about your origin story, your team, highlight awards or recognitions, or share photos.
+        </p>
+      </div>
+
+      <div class="img">
+      <img src="AFBEELDINGEN/MIJ/90e94e13-198f-4ca0-a85d-3926f86e6ec8.JPG" alt="Image 3" class="rounded-lg shadow-lg" />
+    </div>
+
+
+    </main>
+
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      const slideContainer = document.querySelector('.slides');
+
+      // Function to change slide
+      function changeSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
+        slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      // Set interval to change slide every 7 seconds
+      setInterval(changeSlide, 7000);
+    </script>
+
+    <style>
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 1s ease-in-out;
+      }
+
+      .slides img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .slide {
+        min-width: 100%;
+      }
+    </style>
+  </body>
+</html>
