@@ -6,41 +6,31 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8R7LFK0JNM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8R7LFK0JNM');
-</script>
-
-
 </head>
 
 <body class="bg-gray-100">
-  <header class="header relative z-10">
+  <header class="header">
     <div class="header-title">
-          <a href="index.html" class="logo">MADE BY EMI</a> - VIDEOGRAPHY
-        </div>
-        <nav class="nav">
-          <a href="werk.html">Werk</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </header>
+        <a href="index.html" class="logo">MADE BY EMI</a> - VIDEOGRAPHY
     </div>
 
+    <!-- Hamburger Menu -->
+    <input type="checkbox" id="menu-toggle" class="hidden">
+    <label for="menu-toggle" class="hamburger">
+        ☰
+    </label>
+
+    <nav class="nav">
+        <a href="werk.html">Werk</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
   </header>
   
   <main class="relative h-screen">
     <img alt="Me" class="w-full h-full object-cover" height="683" src="EDIT2.png" width="1200"/>
-    <div class="absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col justify-center items-start p-8 space-y-4">
+    <div class="text-wrapper absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col justify-center items-start p-8 space-y-4">
       <h1 class="text-6xl text-white font-bold">
         Hi! Ik ben Emi,
       </h1>
@@ -52,6 +42,7 @@
       </button>
     </div>
     
+    
     <div class="absolute top-8 left-8 flex flex-col items-start space-y-4">
       <p class="text-xl text-white">
         Meegewerkt aan video’s voor
@@ -62,13 +53,7 @@
         <img alt="NPO Radio 3 logo" class="w-16 h-16" height="50" src="NPO_3FM_logo_2020.svg.png" width="50"/>
       </div>
     </div>
-    
-    
-    </div>
-    
-    
-    
-    </div>
   </main>
+
 </body>
 </html>
