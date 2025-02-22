@@ -1,19 +1,10 @@
+/* Algemene body en lettertype */
 body {
     background-color: white !important;
     font-family: 'Roboto', sans-serif;
 }
 
-.nav a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: #1f2937;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-  
+/* Header Styling */
 .header {
     background-color: rgb(243, 241, 241);
     color: #1f2937;
@@ -21,6 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-title {
@@ -35,17 +27,72 @@ body {
     background-color: white;
 }
 
-  
-
-.img {
-    width: 50%;
+/* Navigatie Styling */
+.nav {
     display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
+    gap: 1rem;
 }
 
+.nav a {
+    text-decoration: none;
+    color: #1f2937;
+    transition: color 0.3s ease;
+}
 
-/* Main Section Styles */
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Verbergen op desktop */
+}
+
+/* Verberg standaard het checkbox-input element */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsief Menu op Mobiel */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Toon de hamburger knop op mobiel */
+    }
+
+    .nav {
+        display: none; /* Verberg menu standaard */
+        flex-direction: column; /* Zet de items onder elkaar */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgb(243, 241, 241);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 10;
+    }
+
+    /* Als checkbox is aangevinkt → toon het menu */
+    #menu-toggle:checked + .hamburger + .nav {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Main Section Styling */
 main {
     display: flex;
     flex-direction: column;
@@ -63,7 +110,21 @@ main p {
     margin-bottom: 1rem;
 }
 
-/* Form Section Styles */
+/* Afbeelding Styling */
+.img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Afbeelding centreren op mobiel */
+@media (max-width: 768px) {
+    .img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Formulier Styling */
 form {
     width: 100%;
     max-width: 32rem;
@@ -82,7 +143,7 @@ form input:focus {
     outline: none;
 }
 
-/* Contact Info Section Styles */
+/* Contact Info Styling */
 .text-center h2 {
     font-size: 1.25rem;
     font-weight: bold;
@@ -101,14 +162,14 @@ form input:focus {
     color: #1a202c;
 }
 
-/* Footer Styles */
+/* Footer Styling */
 footer {
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
 }
 
-/* Responsive Layout */
+/* Responsive Layout voor grotere schermen */
 @media (min-width: 768px) {
     main {
         flex-direction: row;
