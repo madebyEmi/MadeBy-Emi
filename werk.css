@@ -3,6 +3,58 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding-top: 25px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.video-title {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Video Styles */
+.video-item video,
+.video-item iframe,
+.hidden-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+.video-item iframe {
+    border-radius: 8px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hidden-video {
+    display: none;
+}
+
+/* Header */
 .header {
     background-color: rgb(243, 241, 241);
     color: #1f2937;
@@ -12,42 +64,55 @@ body {
     align-items: center;
 }
 
-
 .header-title {
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-
+/* Logo */
 .logo-container {
     display: flex;
-    justify-content: center; /* Centraal plaatsen */
-    gap: 1rem; /* Optioneel: Ruimte tussen de logo's */
-    padding-bottom: 1rem; /* Zorgt ervoor dat er geen ruimte onder de logo's is */
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
 }
 
-.logo-small, .logo-img {
-    width: 50px; /* De breedte van het logo */
-    height: 50px; /* De hoogte van het logo, gelijk aan de breedte om een vierkant logo te krijgen */
-    object-fit: contain; /* Zorgt ervoor dat het logo binnen de container past zonder vervorming */
+.logo-small,
+.logo-img,
+.logo-small-l {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
     transition: transform 0.3s;
 }
 
-.logo-small:hover, .logo-img:hover, .logo-small-l:hover {
-    transform: scale(1.1); /* Vergroot het logo bij hover */
+.logo-small:hover,
+.logo-img:hover,
+.logo-small-l:hover {
+    transform: scale(1.1);
 }
-
-
 
 .logo-small-l {
-    width: 60px; /* De breedte van het logo */
-    height: 60px; /* De hoogte van het logo */
-    object-fit: contain; /* Zorgt ervoor dat het logo binnen de container past zonder vervorming */
-    transition: transform 0.3s;
-    margin-top: -5px; /* Verplaats het logo 5px naar boven (pas deze waarde aan naar wens) */
+    width: 60px;
+    height: 60px;
+    margin-top: -5px;
 }
 
+.logo-img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
 
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 1rem;
+}
 
 .nav a {
     margin-left: 1rem;
@@ -67,105 +132,71 @@ body {
     background-color: white;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
 
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-item {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgb(243, 241, 241);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 10;
+    }
+
+    #menu-toggle:checked + .hamburger + .nav {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Main Content */
 .main-content {
     padding: 1rem;
 }
 
-.logo-container {
-    text-align: center; /* Center the logo */
-    margin-bottom: 1rem; /* Space between logo and video grid */
-}
-
-.logo-img {
-    width: 100px; /* Set the width of the logo */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: transform 0.3s; /* Add a transition effect */
-}
-
-.logo-img:hover {
-    transform: scale(1.05); /* Slightly enlarge the logo on hover */
-}
-
-/* Voeg een specifieke class toe voor horizontale video's */
-.video-item.horizontal video {
-    aspect-ratio: 16 / 9; /* Horizontale verhoudingen */
-}
-
-.hidden-video {
-    display: none; /* Verberg de video standaard */
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Zorg ervoor dat de video correct wordt weergegeven */
-    border-radius: 8px;
-}
-
-.video-thumbnail {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Horizontale thumbnail */
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-
-
-.video-item iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem; 
-    padding-top: 25px;
-    padding-left: 150px;
-    padding-right: 150px;
-}
-
-.video-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem; /* Voorkomt te veel witruimte */
-}
-
-.video-title {
-    background-color: rgba(0, 0, 0, 0.7); /* Optioneel: donkere achtergrond */
-    color: white;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    text-align: center;
-    width: 100%;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.video-item video {
-    width: 100%;
-    aspect-ratio: 9 / 16; /* Zorgt voor dezelfde verhoudingen als YouTube */
-    border-radius: 8px; /* Maak de hoeken afgerond zoals bij de iframes */
-}
-
-.video-thumbnail {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Zelfde verhoudingen als de andere video's */
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.hidden-video {
-    display: none; /* Verberg de video standaard */
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-}
-
+/* Video Section Title */
 .video-section-title {
-    font-size: 2rem; /* Grootte van de titel */
-    font-weight: bold; /* Vetgedrukt */
-    text-align: center; /* Center de titel */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
     padding-top: 50px;
-    color: #000000; /* Kleur van de tekst */
+    color: #000000;
 }
