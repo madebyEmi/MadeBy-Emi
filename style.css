@@ -3,6 +3,85 @@ body {
   background-color: white;
 }
 
+/* Algemene styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Standaard navigatie (desktop) */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hamburger menu icoon */
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* Verbergen op desktop */
+}
+
+/* Verberg standaard het checkbox-input element */
+#menu-toggle {
+  display: none;
+}
+
+
+
+/* Responsive: Alleen tonen op mobiel */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Toon de hamburger knop op mobiel */
+  }
+  .text-wrapper {
+    padding-bottom: 55% !important; /* Verplaats alleen de tekst en knop omhoog */
+  }
+  
+  main img {
+    object-position: calc(100% - 10%) center;
+  }
+
+  .nav {
+      display: none; /* Verberg menu standaard */
+      flex-direction: column; /* Zet de items onder elkaar */
+      position: absolute;
+      top: 80px; /* Verhoog de top waarde zodat het menu verder naar beneden staat */
+      left: 0;
+      width: 100%;
+      background: rgb(243, 241, 241); /* Maak de achtergrondkleur gelijk aan de header */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      z-index: 10; /* Zet de z-index hoger zodat het menu boven andere elementen komt */
+  }
+
+  /* Als checkbox is aangevinkt → toon het menu */
+  #menu-toggle:checked + .hamburger + .nav {
+      display: flex;
+  }
+
+  /* Stijl de links in het menu */
+  .nav a {
+      padding: 1rem; /* Ruimte tussen de knoppen */
+      text-align: center; /* Gecentreerde tekst */
+      display: block; /* Maakt de hele rij klikbaar */
+      font-size: 1.2rem; /* Iets grotere tekst */
+      border-bottom: 1px solid #ddd; /* Dunne lijn tussen items */
+  }
+
+  /* Laatste item zonder rand */
+  .nav a:last-child {
+      border-bottom: none;
+  }
+}
+
+
+
+
 .nav a {
   margin-left: 1rem;
   text-decoration: none;
@@ -99,13 +178,3 @@ main .absolute .text-6xl {
   white-space: nowrap;
   overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
-
