@@ -21,6 +21,8 @@ body {
     
     .video-item iframe {
       height: 180px; /* Maak de video iets groter op mobiel */
+              width: auto;
+
     }
   }
   
