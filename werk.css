@@ -5,25 +5,25 @@ body {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Standaard 1 per rij */
-    gap: 16px;
+    grid-template-columns: 1fr; /* Standaard één kolom */
+    gap: 10px;
   }
   
   .video-item iframe {
     width: 100%;
-    height: 200px;
+    height: 200px; /* Pas dit aan indien nodig */
   }
   
-  /* Voor telefoonformaat (max-width: 640px) */
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .video-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 per rij */
+      grid-template-columns: 1fr 1fr; /* Twee video's naast elkaar op kleinere schermen */
     }
-  
+    
     .video-item iframe {
-      height: 180px; /* Groter maken op mobiel */
+      height: 180px; /* Maak de video iets groter op mobiel */
     }
   }
+  
   
 
 /* Video Grid */
