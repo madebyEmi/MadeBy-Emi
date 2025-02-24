@@ -26,21 +26,23 @@ body {
 /* Responsieve aanpassing voor telefoons */
 @media (max-width: 768px) {
     .video-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Twee kolommen naast elkaar */
         gap: 10px;
+        padding: 0 10px; /* Minder padding zodat ze niet te klein worden */
     }
 
     .video-item {
-        width: calc(50% - 10px); /* Twee naast elkaar, rekening houdend met de gap */
+        width: 100%; /* Zorgt dat de video-items netjes in de grid passen */
     }
 
     .video-item iframe {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Volledige breedte benutten */
+        aspect-ratio: 16 / 9; /* Zorgt dat de hoogte automatisch goed blijft */
+        height: auto; /* Voorkomt rare verhoudingen */
     }
 }
+
 
 
 .video-thumbnail {
