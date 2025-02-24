@@ -5,67 +5,43 @@ body {
 
 .video-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Standaard één kolom */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexibele weergave */
     gap: 10px;
-  }
-  
-  .video-item iframe {
-    width: 100%;
-    height: 200px; /* Pas dit aan indien nodig */
-  }
-  
-  @media (max-width: 768px) {
-    .video-grid {
-      grid-template-columns: 1fr 1fr; /* Twee video's naast elkaar op kleinere schermen */
-    }
-    
-    .video-item iframe {
- 
-
-    }
-  }
-  
-  
-
-/* Video Grid */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding-top: 25px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 25px 10px; /* Minder padding voor mobiel */
 }
 
+/* Standaard video-stijlen */
 .video-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.video-title {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    text-align: center;
-    width: 100%;
-    border-radius: 0 0 8px 8px;
-}
-
-/* Video Styles */
-.video-item video,
-.video-item iframe,
-.hidden-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
 }
 
 .video-item iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Zorgt voor de juiste verhouding */
     border-radius: 8px;
 }
+
+/* Responsieve aanpassing voor telefoons */
+@media (max-width: 768px) {
+    .video-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .video-item {
+        width: calc(50% - 10px); /* Twee naast elkaar, rekening houdend met de gap */
+    }
+
+    .video-item iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 .video-thumbnail {
     width: 100%;
