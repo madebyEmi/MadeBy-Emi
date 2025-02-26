@@ -35,15 +35,64 @@ body {
 
 /* Responsive: Alleen tonen op mobiel */
 @media (max-width: 768px) {
+
+/* Responsive: Alleen tonen op mobiel */
+@media (max-width: 768px) {
+  /* Plaats de logo's onderaan het scherm */
+  .meegewerkt-logos {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; /* Zorg ervoor dat de tekst boven de logo's komt */
+    align-items: center; /* Centreer de tekst en logo's */
+    width: 80%;
+    max-width: 260px;
+  }
+
+  .meegewerkt-text {
+    font-size: 1.2rem; /* Maak de tekst iets kleiner */
+    margin-bottom: 6.5rem; /* Zorg ervoor dat er wat ruimte is tussen tekst en logo's */
+  }
+
+  .meegewerkt-logos img {
+    width: 2.5rem; /* Verklein de grootte van de logo's */
+    height: 2.5rem;
+    object-fit: contain;
+  }}
+
+
   .hamburger {
       display: block; /* Toon de hamburger knop op mobiel */
   }
+
   .text-wrapper {
-    padding-bottom: 55% !important; /* Verplaats alleen de tekst en knop omhoog */
+    padding-bottom: 115% !important; /* Verplaats de tekst en knop omhoog */
+    margin-top: -10%; /* Voeg een negatieve marge toe om de tekst en knop omhoog te verschuiven */
   }
   
   main img {
     object-position: calc(100% - 10%) center;
+  }
+
+  main .absolute .w-12 {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  main .absolute .text-6xl {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  main .absolute .text-2xl {
+    font-size: 1.05rem;
+    padding-top: 10px;
+
   }
 
   .nav {
@@ -166,15 +215,3 @@ main .absolute .text-xl {
   color: white;
 }
 
-main .absolute .w-12 {
-  width: 3rem;
-  height: 3rem;
-}
-
-main .absolute .text-6xl {
-  font-size: 4rem;
-  color: white;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-}
