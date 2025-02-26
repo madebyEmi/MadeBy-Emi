@@ -62,8 +62,16 @@ body {
   border-bottom: none;
 }
 
+
+
 /* Responsive voor mobiel */
 @media (max-width: 768px) {
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   /* Hamburger menu tonen op mobiel */
   .hamburger {
       display: block;
