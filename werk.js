@@ -1,21 +1,26 @@
-function playVideo(thumbnail) {
-    const videoItem = thumbnail.closest('.video-item'); // Vind het hele video-item
-    const video = videoItem.querySelector('video'); // Vind de video in dat item
-    const thumbnailImage = videoItem.querySelector('img'); // Vind de thumbnail-afbeelding
 
-    // Verberg de thumbnail en laat de video zien
-    thumbnailImage.style.display = 'none'; // Verberg de thumbnail
-    video.style.display = 'block'; // Maak de video zichtbaar
-    video.play(); // Speel de video af
 
-    // Voeg eventlisteners toe voor 'pause' en 'ended' om de thumbnail weer te tonen
-    video.addEventListener('pause', () => {
-        video.style.display = 'none'; // Verberg de video
-        thumbnailImage.style.display = 'block'; // Laat de thumbnail weer zien
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryDropdown = document.querySelector('.category-dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-    video.addEventListener('ended', () => {
-        video.style.display = 'none'; // Verberg de video
-        thumbnailImage.style.display = 'block'; // Laat de thumbnail weer zien
-    });
-}
+  // Open en sluit de dropdown bij klikken
+  dropdownToggle.addEventListener('click', function() {
+      categoryDropdown.classList.toggle('active');
+  });
+
+  // Scroll naar de sectie wanneer een item wordt aangeklikt
+  dropdownItems.forEach(item => {
+      item.addEventListener('click', function(event) {
+          const targetId = item.getAttribute('href').substring(1);  // Haal het ID van de sectie op
+          const targetElement = document.getElementById(targetId);
+
+          // Scroll naar de sectie
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+
+          // Sluit de dropdown na klikken
+          categoryDropdown.classList.remove('active');
+      });
+  });
+});
