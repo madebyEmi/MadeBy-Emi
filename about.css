@@ -90,6 +90,15 @@ body {
     .nav a:last-child {
         border-bottom: none;
     }
+
+    /* Tekst kleiner maken op mobiel */
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.875rem;
+    }
 }
 
 /* Main Section Styling */
@@ -116,11 +125,33 @@ main p {
     margin: 0 auto;
 }
 
-/* Afbeelding centreren op mobiel */
+/* Afbeelding centreren op mobiel en meer naar rechts op groter scherm */
 @media (max-width: 768px) {
     .img {
         display: flex;
         justify-content: center;
+        width: 70%;
+    }
+}
+
+/* Afbeelding verder naar rechts op grotere schermen */
+@media (min-width: 1024px) {
+    .img {
+        margin-left: auto; /* Verplaatst de afbeelding naar rechts */
+        width: 40%; /* De afbeelding wordt smaller op grote schermen */
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    /* Tekst iets kleiner op grotere schermen */
+    main h1 {
+        font-size: 1.75rem;
+    }
+
+    main p {
+        font-size: 1rem;
     }
 }
 
@@ -177,5 +208,7 @@ footer {
 
     .img {
         width: 25%;
+        padding-top: 35px;
+        margin-right: 10px;
     }
 }
