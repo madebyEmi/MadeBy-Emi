@@ -2,6 +2,63 @@ body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
 }
+  
+/* Stijl voor de dropdown onder de navigatiebalk */
+.category-dropdown {
+    display: none;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.dropdown-toggle {
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    
+}
+
+.arrow {
+    margin-left: 5px;
+    
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-item {
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+    font-size: 16px;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Zichtbaar maken van de dropdown-menu bij hover of click */
+.category-dropdown.active .dropdown-menu {
+    display: block;
+}
+
+/* Zorg ervoor dat dit alleen op mobiel zichtbaar is */
+@media (max-width: 768px) {
+    .category-dropdown {
+        display: block;
+    }
+}
+
 
 .video-grid {
     display: grid;
