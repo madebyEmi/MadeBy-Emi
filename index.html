@@ -1,52 +1,47 @@
-<html lang="en">
+
+
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Made by Emi, portfolio.">
-<meta name="keywords" content="webdesign, creatief, portfolio, freelance, Made by Emi">
-<meta name="author" content="Emi van Lierop">
+  <meta name="keywords" content="webdesign, creatief, portfolio, freelance, Made by Emi">
+  <meta name="author" content="Emi van Lierop">
   <title>Made by Emi</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js" defer></script>
 </head>
-
 <body class="bg-gray-100">
   <header class="header">
     <div class="header-title">
-        <a href="index.html" class="logo">MADE BY EMI</a> - VIDEOGRAPHY
+      <a href="index.html" class="logo">MADE BY EMI</a> - VIDEOGRAPHY
     </div>
-
-    <!-- Hamburger Menu -->
     <input type="checkbox" id="menu-toggle" class="hidden">
-    <label for="menu-toggle" class="hamburger">
-        ☰
-    </label>
-
+    <label for="menu-toggle" class="hamburger">☰</label>
     <nav class="nav">
-        <a href="werk.html">Werk</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <a href="werk.html">Werk</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-  
+
   <main class="relative h-screen">
-    <img alt="Me" class="w-full h-full object-cover" height="683" src="EDIT2.png" width="1200"/>
+    <img alt="Me" class="w-full h-full object-cover" src="EDIT2.png" width="1200" height="683">
     <div class="text-wrapper absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col justify-center items-start p-8 space-y-4">
-      <h1 class="text-6xl text-white font-bold">
-        Hi! Ik ben Emi,
-      </h1>
+      <h1 class="text-6xl text-white font-bold typewriter"></h1>
       <p class="text-2xl text-white">
         Jouw verhaal vertalen naar beeld en geluid?<br>Neem een kijkje door mijn werk!
       </p>
-      <button class="px-6 py-3 border border-white text-white hover:bg-white hover:text-gray-900 transition">
+      <button id="work-button" class="px-6 py-3 border border-white text-white hover:bg-white hover:text-gray-900 transition hidden-button">
         <a href="werk.html">MIJN WERK</a> 
       </button>
+      
     </div>
-    
 
-    
     <div class="absolute top-8 left-8 flex flex-col items-start space-y-4">
 
       <div class="meegewerkt-logos">
@@ -57,8 +52,9 @@
           <img alt="NPO Radio 3 logo" class="w-16 h-16" height="50" src="NPO_3FM_logo_2020.svg.png" width="50"/>
         </div>
       </div>
-      
+
   </main>
+
 
 </body>
 </html>
